@@ -1,0 +1,1938 @@
+#  国家/地区 Code 参照表 
+
+通讯录的用户资源相关接口中，用户的国家/地区属性（country 字段）是以 Code 的数据形式保存和转义的，本文提供完整的国家/地区 Code 参照表供你参考。
+
+
+
+> **📝 注意**
+> 如果调用接口时，使用非法的字符串填入 country 字段，会存在管理后台或 app 内不显示国家/地区的问题。
+
+
+
+##  国家/地区 Code
+
+:::html
+<md-table>
+  <md-thead>
+      <md-tr>
+      <md-th style="width: 50%;">国家/地区名称</md-th>
+      <md-th style="width: 50%;">Code</md-th>
+      </md-tr>
+  </md-thead>
+  <md-tbody>
+
+<md-tr>
+	<md-td>
+	爱尔兰
+	</md-td>
+	<md-td>
+	IE
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	埃及
+	</md-td>
+	<md-td>
+	EG
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	埃塞俄比亚
+	</md-td>
+	<md-td>
+	ET
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	爱沙尼亚
+	</md-td>
+	<md-td>
+	EE
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	安道尔
+	</md-td>
+	<md-td>
+	AD
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	安哥拉
+	</md-td>
+	<md-td>
+	AO
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	安圭拉
+	</md-td>
+	<md-td>
+	AI
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	安提瓜和巴布达
+	</md-td>
+	<md-td>
+	AG
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	澳大利亚
+	</md-td>
+	<md-td>
+	AU
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	奥地利
+	</md-td>
+	<md-td>
+	AT
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	奥兰群岛
+	</md-td>
+	<md-td>
+	AX
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	中国澳门
+	</md-td>
+	<md-td>
+	MO
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	阿尔巴尼亚
+	</md-td>
+	<md-td>
+	AL
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	阿尔及利亚
+	</md-td>
+	<md-td>
+	DZ
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	阿富汗
+	</md-td>
+	<md-td>
+	AF
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	阿根廷
+	</md-td>
+	<md-td>
+	AR
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	阿拉伯联合酋长国
+	</md-td>
+	<md-td>
+	AE
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	阿鲁巴
+	</md-td>
+	<md-td>
+	AW
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	阿曼
+	</md-td>
+	<md-td>
+	OM
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	阿塞拜疆
+	</md-td>
+	<md-td>
+	AZ
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	白俄罗斯
+	</md-td>
+	<md-td>
+	BY
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	百慕大
+	</md-td>
+	<md-td>
+	BM
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	保加利亚
+	</md-td>
+	<md-td>
+	BG
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	巴巴多斯
+	</md-td>
+	<md-td>
+	BB
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	巴布亚新几内亚
+	</md-td>
+	<md-td>
+	PG
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	巴哈马
+	</md-td>
+	<md-td>
+	BS
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	巴基斯坦
+	</md-td>
+	<md-td>
+	PK
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	巴拉圭
+	</md-td>
+	<md-td>
+	PY
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	巴勒斯坦领土
+	</md-td>
+	<md-td>
+	PS
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	巴林
+	</md-td>
+	<md-td>
+	BH
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	巴拿马
+	</md-td>
+	<md-td>
+	PA
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	巴西
+	</md-td>
+	<md-td>
+	BR
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	北马里亚纳群岛
+	</md-td>
+	<md-td>
+	MP
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	贝宁
+	</md-td>
+	<md-td>
+	BJ
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	冰岛
+	</md-td>
+	<md-td>
+	IS
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	比利时
+	</md-td>
+	<md-td>
+	BE
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	博茨瓦纳
+	</md-td>
+	<md-td>
+	BW
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	波多黎各
+	</md-td>
+	<md-td>
+	PR
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	波兰
+	</md-td>
+	<md-td>
+	PL
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	玻利维亚
+	</md-td>
+	<md-td>
+	BO
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	伯利兹
+	</md-td>
+	<md-td>
+	BZ
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	波斯尼亚和黑塞哥维那
+	</md-td>
+	<md-td>
+	BA
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	不丹
+	</md-td>
+	<md-td>
+	BT
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	布基纳法索
+	</md-td>
+	<md-td>
+	BF
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	布隆迪
+	</md-td>
+	<md-td>
+	BI
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	秘鲁
+	</md-td>
+	<md-td>
+	PE
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	赤道几内亚
+	</md-td>
+	<md-td>
+	GQ
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	朝鲜
+	</md-td>
+	<md-td>
+	KP
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	丹麦
+	</md-td>
+	<md-td>
+	DK
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	德国
+	</md-td>
+	<md-td>
+	DE
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	迭戈·加西亚
+	</md-td>
+	<md-td>
+	DG
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	东帝汶
+	</md-td>
+	<md-td>
+	TL
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	多哥
+	</md-td>
+	<md-td>
+	TG
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	多米尼加共和国
+	</md-td>
+	<md-td>
+	DO
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	多米尼克
+	</md-td>
+	<md-td>
+	DM
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	厄瓜多尔
+	</md-td>
+	<md-td>
+	EC
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	厄立特里亚
+	</md-td>
+	<md-td>
+	ER
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	俄罗斯
+	</md-td>
+	<md-td>
+	RU
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	梵蒂冈
+	</md-td>
+	<md-td>
+	VA
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	法国
+	</md-td>
+	<md-td>
+	FR
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	法罗群岛
+	</md-td>
+	<md-td>
+	FO
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	法属波利尼西亚
+	</md-td>
+	<md-td>
+	PF
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	法属圭亚那
+	</md-td>
+	<md-td>
+	GF
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	斐济
+	</md-td>
+	<md-td>
+	FJ
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	菲律宾
+	</md-td>
+	<md-td>
+	PH
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	芬兰
+	</md-td>
+	<md-td>
+	FI
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	佛得角
+	</md-td>
+	<md-td>
+	CV
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	福克兰群岛
+	</md-td>
+	<md-td>
+	FK
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	冈比亚
+	</md-td>
+	<md-td>
+	GM
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	刚果（布）
+	</md-td>
+	<md-td>
+	CG
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	刚果（金）
+	</md-td>
+	<md-td>
+	CD
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	格恩西岛
+	</md-td>
+	<md-td>
+	GG
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	格陵兰
+	</md-td>
+	<md-td>
+	GL
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	格林纳达
+	</md-td>
+	<md-td>
+	GD
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	哥伦比亚
+	</md-td>
+	<md-td>
+	CO
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	格鲁吉亚
+	</md-td>
+	<md-td>
+	GE
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	哥斯达黎加
+	</md-td>
+	<md-td>
+	CR
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	关岛
+	</md-td>
+	<md-td>
+	GU
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	瓜德罗普
+	</md-td>
+	<md-td>
+	GP
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	圭亚那
+	</md-td>
+	<md-td>
+	GY
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	古巴
+	</md-td>
+	<md-td>
+	CU
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	海地
+	</md-td>
+	<md-td>
+	HT
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	韩国
+	</md-td>
+	<md-td>
+	KR
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	哈萨克斯坦
+	</md-td>
+	<md-td>
+	KZ
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	黑山
+	</md-td>
+	<md-td>
+	ME
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	荷兰
+	</md-td>
+	<md-td>
+	NL
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	荷属加勒比区
+	</md-td>
+	<md-td>
+	BQ
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	洪都拉斯
+	</md-td>
+	<md-td>
+	HN
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	柬埔寨
+	</md-td>
+	<md-td>
+	KH
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	加纳
+	</md-td>
+	<md-td>
+	GH
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	加拿大
+	</md-td>
+	<md-td>
+	CA
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	加蓬
+	</md-td>
+	<md-td>
+	GA
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	捷克
+	</md-td>
+	<md-td>
+	CZ
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	津巴布韦
+	</md-td>
+	<md-td>
+	ZW
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	吉布提
+	</md-td>
+	<md-td>
+	DJ
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	吉尔吉斯斯坦
+	</md-td>
+	<md-td>
+	KG
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	基里巴斯
+	</md-td>
+	<md-td>
+	KI
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	几内亚
+	</md-td>
+	<md-td>
+	GN
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	几内亚比绍
+	</md-td>
+	<md-td>
+	GW
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	开曼群岛
+	</md-td>
+	<md-td>
+	KY
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	喀麦隆
+	</md-td>
+	<md-td>
+	CM
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	肯尼亚
+	</md-td>
+	<md-td>
+	KE
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	科科斯（基林）群岛
+	</md-td>
+	<md-td>
+	CC
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	克罗地亚
+	</md-td>
+	<md-td>
+	HR
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	科摩罗
+	</md-td>
+	<md-td>
+	KM
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	科特迪瓦
+	</md-td>
+	<md-td>
+	CI
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	科威特
+	</md-td>
+	<md-td>
+	KW
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	库克群岛
+	</md-td>
+	<md-td>
+	CK
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	库拉索
+	</md-td>
+	<md-td>
+	CW
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	卡塔尔
+	</md-td>
+	<md-td>
+	QA
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	莱索托
+	</md-td>
+	<md-td>
+	LS
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	老挝
+	</md-td>
+	<md-td>
+	LA
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	拉脱维亚
+	</md-td>
+	<md-td>
+	LV
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	列支敦士登
+	</md-td>
+	<md-td>
+	LI
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	留尼汪
+	</md-td>
+	<md-td>
+	RE
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	黎巴嫩
+	</md-td>
+	<md-td>
+	LB
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	利比里亚
+	</md-td>
+	<md-td>
+	LR
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	利比亚
+	</md-td>
+	<md-td>
+	LY
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	立陶宛
+	</md-td>
+	<md-td>
+	LT
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	罗马尼亚
+	</md-td>
+	<md-td>
+	RO
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	卢森堡
+	</md-td>
+	<md-td>
+	LU
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	卢旺达
+	</md-td>
+	<md-td>
+	RW
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	毛里求斯
+	</md-td>
+	<md-td>
+	MU
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	毛里塔尼亚
+	</md-td>
+	<md-td>
+	MR
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	马达加斯加
+	</md-td>
+	<md-td>
+	MG
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	马恩岛
+	</md-td>
+	<md-td>
+	IM
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	马尔代夫
+	</md-td>
+	<md-td>
+	MV
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	马耳他
+	</md-td>
+	<md-td>
+	MT
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	马来西亚
+	</md-td>
+	<md-td>
+	MY
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	马拉维
+	</md-td>
+	<md-td>
+	MW
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	马里
+	</md-td>
+	<md-td>
+	ML
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	马其顿
+	</md-td>
+	<md-td>
+	MK
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	马绍尔群岛
+	</md-td>
+	<md-td>
+	MH
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	马提尼克
+	</md-td>
+	<md-td>
+	MQ
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	马约特
+	</md-td>
+	<md-td>
+	YT
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	美国
+	</md-td>
+	<md-td>
+	US
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	美属萨摩亚
+	</md-td>
+	<md-td>
+	AS
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	美属维尔京群岛
+	</md-td>
+	<md-td>
+	VI
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	蒙古
+	</md-td>
+	<md-td>
+	MN
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	孟加拉国
+	</md-td>
+	<md-td>
+	BD
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	蒙特塞拉特
+	</md-td>
+	<md-td>
+	MS
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	缅甸
+	</md-td>
+	<md-td>
+	MM
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	密克罗尼西亚
+	</md-td>
+	<md-td>
+	FM
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	摩尔多瓦
+	</md-td>
+	<md-td>
+	MD
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	摩洛哥
+	</md-td>
+	<md-td>
+	MA
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	摩纳哥
+	</md-td>
+	<md-td>
+	MC
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	莫桑比克
+	</md-td>
+	<md-td>
+	MZ
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	墨西哥
+	</md-td>
+	<md-td>
+	MX
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	南非
+	</md-td>
+	<md-td>
+	ZA
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	南苏丹
+	</md-td>
+	<md-td>
+	SS
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	瑙鲁
+	</md-td>
+	<md-td>
+	NR
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	纳米比亚
+	</md-td>
+	<md-td>
+	NA
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	纽埃
+	</md-td>
+	<md-td>
+	NU
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	尼泊尔
+	</md-td>
+	<md-td>
+	NP
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	尼加拉瓜
+	</md-td>
+	<md-td>
+	NI
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	尼日尔
+	</md-td>
+	<md-td>
+	NE
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	尼日利亚
+	</md-td>
+	<md-td>
+	NG
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	诺福克岛
+	</md-td>
+	<md-td>
+	NF
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	挪威
+	</md-td>
+	<md-td>
+	NO
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	帕劳
+	</md-td>
+	<md-td>
+	PW
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	皮特凯恩群岛
+	</md-td>
+	<md-td>
+	PN
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	葡萄牙
+	</md-td>
+	<md-td>
+	PT
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	日本
+	</md-td>
+	<md-td>
+	JP
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	瑞典
+	</md-td>
+	<md-td>
+	SE
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	瑞士
+	</md-td>
+	<md-td>
+	CH
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	塞尔维亚
+	</md-td>
+	<md-td>
+	RS
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	塞拉利昂
+	</md-td>
+	<md-td>
+	SL
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	塞内加尔
+	</md-td>
+	<md-td>
+	SN
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	塞浦路斯
+	</md-td>
+	<md-td>
+	CY
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	塞舌尔
+	</md-td>
+	<md-td>
+	SC
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	萨尔瓦多
+	</md-td>
+	<md-td>
+	SV
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	萨摩亚
+	</md-td>
+	<md-td>
+	WS
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	沙特阿拉伯
+	</md-td>
+	<md-td>
+	SA
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	圣巴泰勒米
+	</md-td>
+	<md-td>
+	BL
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	圣诞岛
+	</md-td>
+	<md-td>
+	CX
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	圣多美和普林西比
+	</md-td>
+	<md-td>
+	ST
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	圣基茨和尼维斯
+	</md-td>
+	<md-td>
+	KN
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	圣卢西亚
+	</md-td>
+	<md-td>
+	LC
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	圣马丁岛
+	</md-td>
+	<md-td>
+	MF
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	圣马力诺
+	</md-td>
+	<md-td>
+	SM
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	圣皮埃尔和密克隆群岛
+	</md-td>
+	<md-td>
+	PM
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	圣文森特和格林纳丁斯
+	</md-td>
+	<md-td>
+	VC
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	斯里兰卡
+	</md-td>
+	<md-td>
+	LK
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	斯洛伐克
+	</md-td>
+	<md-td>
+	SK
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	斯洛文尼亚
+	</md-td>
+	<md-td>
+	SI
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	斯威士兰
+	</md-td>
+	<md-td>
+	SZ
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	所罗门群岛
+	</md-td>
+	<md-td>
+	SB
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	索马里
+	</md-td>
+	<md-td>
+	SO
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	苏丹
+	</md-td>
+	<md-td>
+	SD
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	苏里南
+	</md-td>
+	<md-td>
+	SR
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	泰国
+	</md-td>
+	<md-td>
+	TH
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	中国台湾
+	</md-td>
+	<md-td>
+	TW
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	汤加
+	</md-td>
+	<md-td>
+	TO
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	坦桑尼亚
+	</md-td>
+	<md-td>
+	TZ
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	塔吉克斯坦
+	</md-td>
+	<md-td>
+	TJ
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	特克斯和凯科斯群岛
+	</md-td>
+	<md-td>
+	TC
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	特立尼达和多巴哥
+	</md-td>
+	<md-td>
+	TT
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	托克劳
+	</md-td>
+	<md-td>
+	TK
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	土耳其
+	</md-td>
+	<md-td>
+	TR
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	土库曼斯坦
+	</md-td>
+	<md-td>
+	TM
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	突尼斯
+	</md-td>
+	<md-td>
+	TN
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	图瓦卢
+	</md-td>
+	<md-td>
+	TV
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	瓦努阿图
+	</md-td>
+	<md-td>
+	VU
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	危地马拉
+	</md-td>
+	<md-td>
+	GT
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	委内瑞拉
+	</md-td>
+	<md-td>
+	VE
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	文莱
+	</md-td>
+	<md-td>
+	BN
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	乌干达
+	</md-td>
+	<md-td>
+	UG
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	乌克兰
+	</md-td>
+	<md-td>
+	UA
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	乌拉圭
+	</md-td>
+	<md-td>
+	UY
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	乌兹别克斯坦
+	</md-td>
+	<md-td>
+	UZ
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	中国香港
+	</md-td>
+	<md-td>
+	HK
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	新加坡
+	</md-td>
+	<md-td>
+	SG
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	新喀里多尼亚
+	</md-td>
+	<md-td>
+	NC
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	新西兰
+	</md-td>
+	<md-td>
+	NZ
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	匈牙利
+	</md-td>
+	<md-td>
+	HU
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	西班牙
+	</md-td>
+	<md-td>
+	ES
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	希腊
+	</md-td>
+	<md-td>
+	GR
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	叙利亚
+	</md-td>
+	<md-td>
+	SY
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	牙买加
+	</md-td>
+	<md-td>
+	JM
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	亚美尼亚
+	</md-td>
+	<md-td>
+	AM
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	也门
+	</md-td>
+	<md-td>
+	YE
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	英国
+	</md-td>
+	<md-td>
+	GB
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	英属维尔京群岛
+	</md-td>
+	<md-td>
+	VG
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	英属印度洋领地
+	</md-td>
+	<md-td>
+	IO
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	印度
+	</md-td>
+	<md-td>
+	IN
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	印度尼西亚
+	</md-td>
+	<md-td>
+	ID
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	意大利
+	</md-td>
+	<md-td>
+	IT
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	伊朗
+	</md-td>
+	<md-td>
+	IR
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	伊拉克
+	</md-td>
+	<md-td>
+	IQ
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	以色列
+	</md-td>
+	<md-td>
+	IL
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	约旦
+	</md-td>
+	<md-td>
+	JO
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	越南
+	</md-td>
+	<md-td>
+	VN
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	赞比亚
+	</md-td>
+	<md-td>
+	ZM
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	泽西岛
+	</md-td>
+	<md-td>
+	JE
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	乍得
+	</md-td>
+	<md-td>
+	TD
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	直布罗陀
+	</md-td>
+	<md-td>
+	GI
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	智利
+	</md-td>
+	<md-td>
+	CL
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	中非共和国
+	</md-td>
+	<md-td>
+	CF
+	</md-td>
+</md-tr>
+<md-tr>
+	<md-td>
+	中国
+	</md-td>
+	<md-td>
+	CN
+	</md-td>
+</md-tr>
+    
+  </md-tbody>
+</md-table>

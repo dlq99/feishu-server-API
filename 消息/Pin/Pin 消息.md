@@ -1,0 +1,277 @@
+## Pin 消息
+
+Pin 一条指定的消息。Pin 消息的效果可参见[Pin 消息概述](/ssl:ttdoc/uAjLw4CM/ukTMukTMukTM/reference/im-v1/pin/pin-overview)。
+
+## 请求
+
+| 基本 | |
+| --- | --- |
+| HTTP URL | `https://open.feishu.cn/open-apis/im/v1/pins` |
+| HTTP Method | POST |
+| 支持的访问令牌 | tenant_access_token, user_access_token |
+| 支持的应用类型 | custom  isv |
+| 权限要求 | 以应用的身份发消息 <br> 获取与发送单聊、群组消息 <br> 添加、 取消 Pin 消息 |
+| 权限要求 | im:message <br> im:message.pins:write_only <br> im:message:send_as_bot |
+
+### 请求体
+
+| 参数名 | 类型 | 必填 | 描述 |
+| ------ | ---- | ---- | ---- |
+| message_id | string | 是 | 待 Pin 的消息 ID。ID 获取方式：<br>  <br>- 调用[发送消息](/ssl:ttdoc/uAjLw4CM/ukTMukTMukTM/reference/im-v1/message/create)接口后，从响应结果的 `message_id` 参数获取。<br>- 监听[接收消息](/ssl:ttdoc/uAjLw4CM/ukTMukTMukTM/reference/im-v1/message/events/receive)事件，当触发该事件后可以从事件体内获取消息的 `message_id`。<br>- 调用[获取会话历史消息](/ssl:ttdoc/uAjLw4CM/ukTMukTMukTM/reference/im-v1/message/list)接口，从响应结果的 `message_id` 参数获取。 <br> **示例**: om_dc13264520392913993dd051dba21dcf  |
+
+**请求体示例**:
+
+```json
+{
+    "message_id": "om_dc13264520392913993dd051dba21dcf"
+}
+```
+
+### 响应
+
+**响应示例**:
+
+```json
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "pin": {
+            "message_id": "om_dc13264520392913993dd051dba21dcf",
+            "chat_id": "oc_a0553eda9014c201e6969b478895c230",
+            "operator_id": "ou_7d8a6e6df7621556ce0d21922b676706ccs",
+            "operator_id_type": "open_id",
+            "create_time": "1615380573211"
+        }
+    }
+}
+```
+
+### 错误码
+
+| HTTP状态码 | 错误码 | 描述 | 排查建议 |
+| ---------- | ------ | ---- | -------- |
+| 400 | 230001 | Your request contains an invalid request parameter. | 参数错误，请根据接口返回的错误信息并参考文档检查输入参数。 |
+| 400 | 230002 | The bot can not be outside the group. | 机器人不在对应群组中。你需要确保应用机器人已添加到待操作的群组中。如何添加机器人参考[机器人使用指南](/ssl:ttdoc/ukTMukTMukTM/uATM04CMxQjLwEDN)。 |
+| 400 | 230006 | Bot ability is not activated. | 应用未启用机器人能力。启用方式参见[如何启用机器人能力](/ssl:ttdoc/uAjLw4CM/ugTN1YjL4UTN24CO1UjN/trouble-shooting/how-to-enable-bot-ability)。 |
+| 400 | 230111 | Action unavailable as the message will self-destruct soon. | 定时删除的消息无法进行操作。 |
+| 400 | 232009 | Your request specifies a chat which has already been dissolved. | 相关群组已被解散，无法进行当前操作。 |
+| 400 | 230011 | The message is recalled. | 消息已被撤回，不支持该操作。 |
+| 400 | 230013 | Bot has NO availability to this user. | 目标用户（以用户的 user_id/open_id/union_id/email 指定的消息接收者）或单聊用户（以群聊的 chat_id 指定的消息接收者，但 chat_id 对应的群聊类型为单聊 `p2p`）不在应用机器人的可用范围内，或者是在应用的禁用范围内。<br><br>**注意**：如果目标用户已离职，也会报错 230013。<br><br>解决方案：<br><br>1. 登录[开发者后台](https://open.feishu.cn/app)，找到并进入指定应用详情页。<br>2. 在左侧导航栏进入 **应用发布** >  **版本管理与发布** 页面，点击 **创建版本**。<br>3. 在 **版本详情** 页面，找到 **可用范围** 区域，点击 **编辑**。<br>4. 在弹出的对话框内，配置应用的可用范围，将用户添加至可用范围内。<br>5. 在页面底部点击 **保存**，并发布应用使配置生效。<br>6. （可选）如果以上配置完成后仍报错，则需要联系企业管理员登录[管理后台](https://feishu.cn/admin)，在 **工作台** > **应用管理** 中进入指定应用详情页，在 **应用可用范围** 内查看该用户是否被设置为了 **禁用成员**。<br><br>具体操作参见[配置应用可用范围](/ssl:ttdoc/home/introduction-to-scope-and-authorization/availability)。 |
+| 400 | 230027 | Lack of necessary permissions. | 无权进行本次操作。可能的原因有：<br><br>1. 缺少相应权限，可根据实际的错误信息进行排查。<br>2. 未检查到用户授权信息。<br>3. 如果需要机器人在外部群操作，则需要先为机器人开启对外共享能力，详情参见[机器人支持外部群和外部用户单聊](/ssl:ttdoc/uAjLw4CM/ukzMukzMukzM/develop-robots/add-bot-to-external-group)。 |
+| 400 | 230045 | The chat not exist. | 消息所属的群聊不存在，请检查群聊是否已解散。 |
+| 400 | 230046 | No Permission to Pin/Unpin messages in the chat. | 该群设置仅群主和群管理员可以 Pin 消息，请检查操作者在群内的身份。 |
+| 400 | 230047 | Pin/Unpin message trigger message_id limit. | 对同一条消息 Pin/Unpin 触发限流策略，请降低请求速度，稍后再试。 |
+| 400 | 230050 | The message is invisible to the operator. | 该消息对于操作者不可见，无法进行本操作。 |
+| 400 | 230054 | This operation is not supported for this message type. | 该消息类型不支持本操作，详情参见[消息与群组部分API增加不支持的消息类型校验<br>](/ssl:ttdoc/uAjLw4CM/ugTN1YjL4UTN24CO1UjN/breaking-change/unsupported-message-type-verification)。 |
+
+### 调用示例
+
+#### Golang SDK
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"github.com/larksuite/oapi-sdk-go/v3"
+	"github.com/larksuite/oapi-sdk-go/v3/core"
+	"github.com/larksuite/oapi-sdk-go/v3/service/im/v1"
+)
+
+// SDK 使用文档：https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/server-side-sdk/golang-sdk-guide/preparations
+// 复制该 Demo 后, 需要将 "YOUR_APP_ID", "YOUR_APP_SECRET" 替换为自己应用的 APP_ID, APP_SECRET.
+// 以下示例代码默认根据文档示例值填充，如果存在代码问题，请在 API 调试台填上相关必要参数后再复制代码使用
+func main() {
+	// 创建 Client
+	client := lark.NewClient("YOUR_APP_ID", "YOUR_APP_SECRET")
+	// 创建请求对象
+	req := larkim.NewCreatePinReqBuilder().
+		Body(larkim.NewCreatePinReqBodyBuilder().
+			MessageId(`om_dc13264520392913993dd051dba21dcf`).
+			Build()).
+		Build()
+
+	// 发起请求
+	resp, err := client.Im.V1.Pin.Create(context.Background(), req)
+
+	// 处理错误
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	// 服务端错误处理
+	if !resp.Success() {
+		fmt.Printf("logId: %s, error response: \n%s", resp.RequestId(), larkcore.Prettify(resp.CodeError))
+		return
+	}
+
+	// 业务处理
+	fmt.Println(larkcore.Prettify(resp))
+}
+
+```
+
+#### Python SDK
+
+```python
+import json
+
+import lark_oapi as lark
+from lark_oapi.api.im.v1 import *
+
+
+# SDK 使用说明: https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/server-side-sdk/python--sdk/preparations-before-development
+# 以下示例代码默认根据文档示例值填充，如果存在代码问题，请在 API 调试台填上相关必要参数后再复制代码使用
+# 复制该 Demo 后, 需要将 "YOUR_APP_ID", "YOUR_APP_SECRET" 替换为自己应用的 APP_ID, APP_SECRET.
+def main():
+    # 创建client
+    client = lark.Client.builder() \
+        .app_id("YOUR_APP_ID") \
+        .app_secret("YOUR_APP_SECRET") \
+        .log_level(lark.LogLevel.DEBUG) \
+        .build()
+
+    # 构造请求对象
+    request: CreatePinRequest = CreatePinRequest.builder() \
+        .request_body(CreatePinRequestBody.builder()
+            .message_id("om_dc13264520392913993dd051dba21dcf")
+            .build()) \
+        .build()
+
+    # 发起请求
+    response: CreatePinResponse = client.im.v1.pin.create(request)
+
+    # 处理失败返回
+    if not response.success():
+        lark.logger.error(
+            f"client.im.v1.pin.create failed, code: {response.code}, msg: {response.msg}, log_id: {response.get_log_id()}, resp: \n{json.dumps(json.loads(response.raw.content), indent=4, ensure_ascii=False)}")
+        return
+
+    # 处理业务结果
+    lark.logger.info(lark.JSON.marshal(response.data, indent=4))
+
+
+if __name__ == "__main__":
+    main()
+
+```
+
+#### Java SDK
+
+```java
+package com.lark.oapi.sample.apiall.imv1;
+import com.google.gson.JsonParser;
+import com.lark.oapi.Client;
+import com.lark.oapi.core.utils.Jsons;
+import com.lark.oapi.service.im.v1.model.*;
+import java.util.HashMap;
+import com.lark.oapi.core.request.RequestOptions;
+
+// SDK 使用文档：https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/server-side-sdk/java-sdk-guide/preparations
+// 复制该 Demo 后, 需要将 "YOUR_APP_ID", "YOUR_APP_SECRET" 替换为自己应用的 APP_ID, APP_SECRET.
+// 以下示例代码默认根据文档示例值填充，如果存在代码问题，请在 API 调试台填上相关必要参数后再复制代码使用
+public class CreatePinSample{
+
+  public static void main(String arg[]) throws Exception {
+      // 构建client
+      Client client = Client.newBuilder("YOUR_APP_ID", "YOUR_APP_SECRET").build();
+
+      // 创建请求对象
+      CreatePinReq req = CreatePinReq.newBuilder()
+             .createPinReqBody(CreatePinReqBody.newBuilder()
+                 .messageId("om_dc13264520392913993dd051dba21dcf")
+                  .build())
+             .build();
+
+      // 发起请求
+      CreatePinResp resp = client.im().v1().pin().create(req);
+
+       // 处理服务端错误
+       if (!resp.success()) {
+         System.out.println(String.format("code:%s,msg:%s,reqId:%s, resp:%s",
+                    resp.getCode(), resp.getMsg(), resp.getRequestId(), Jsons.createGSON(true, false).toJson(JsonParser.parseString(new String(resp.getRawResponse().getBody(), StandardCharsets.UTF_8)))));
+         return;
+       }
+
+       // 业务数据处理
+         System.out.println(Jsons.DEFAULT.toJson(resp.getData()));
+  }
+}
+
+```
+
+#### Nodejs SDK
+
+```javascript
+// node-sdk使用说明：https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/server-side-sdk/nodejs-sdk/preparation-before-development
+// 以下示例代码默认根据文档示例值填充，如果存在代码问题，请在 API 调试台填上相关必要参数后再复制代码使用
+const lark = require('@larksuiteoapi/node-sdk');
+
+// 开发者复制该Demo后，需要修改Demo里面的"app id", "app secret"为自己应用的appId, appSecret
+const client = new lark.Client({
+    appId: 'app id',
+    appSecret: 'app secret',
+    // disableTokenCache为true时，SDK不会主动拉取并缓存token，这时需要在发起请求时，调用lark.withTenantToken("token")手动传递
+    // disableTokenCache为false时，SDK会自动管理租户token的获取与刷新，无需使用lark.withTenantToken("token")手动传递token
+    disableTokenCache: true
+});
+
+client.im.v1.pin.create({
+        data: {
+                message_id:'om_dc13264520392913993dd051dba21dcf',
+        },
+},
+    lark.withTenantToken("t-7f1b******8e560")
+).then(res => {
+    console.log(res);
+}).catch(e => {
+    console.error(JSON.stringify(e.response.data, null, 4));
+});
+
+```
+
+#### C#-restsharp
+
+```csharp
+var client = new RestClient("https://open.feishu.cn/open-apis/im/v1/pins");
+client.Timeout = -1;
+var request = new RestRequest(Method.POST);
+request.AddHeader("Authorization", "Bearer t-7f1b******8e560");
+request.AddHeader("Content-Type", "application/json");
+var body = "{\"message_id\":\"om_dc13264520392913993dd051dba21dcf\"}";
+request.AddParameter("application/json", body,  ParameterType.RequestBody);
+IRestResponse response = client.Execute(request);
+Console.WriteLine(response.Content);
+```
+
+#### Php-guzzle
+
+```php
+<?php
+$client = new Client();
+$headers = [
+  'Authorization' => 'Bearer t-7f1b******8e560',
+  'Content-Type' => 'application/json'
+];
+$body = '{
+    "message_id": "om_dc13264520392913993dd051dba21dcf"
+}';
+$request = new Request('POST', 'https://open.feishu.cn/open-apis/im/v1/pins', $headers, $body);
+$res = $client->sendAsync($request)->wait();
+echo $res->getBody();
+```
+
+#### Curl
+
+```bash
+curl -i -X POST 'https://open.feishu.cn/open-apis/im/v1/pins' \
+-H 'Authorization: Bearer t-7f1b******8e560' \
+-H 'Content-Type: application/json' \
+-d '{
+	"message_id": "om_dc13264520392913993dd051dba21dcf"
+}'
+```
+
