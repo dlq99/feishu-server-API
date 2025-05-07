@@ -26,7 +26,7 @@
 2. 也可克隆到本地使用
 
 ```bash
-git clone https://github.com/your-username/feishu-api-docs.git
+git clone https://github.com/dlq99/feishu-api-docs.git
 ```
 
 ## 文档更新
